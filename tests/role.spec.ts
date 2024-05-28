@@ -7,7 +7,6 @@ test('go to role website', async ({ page }) => {
   const headingLocator = page.getByRole('heading', { name: 'Sign up' });
   await expect(headingLocator).toBeVisible();
   //await page.getByRole('checkbox', { name: 'Subscribe' }).check();
-
   //await page.getByRole('button', { name: /submit/i }).click();
 });
 
