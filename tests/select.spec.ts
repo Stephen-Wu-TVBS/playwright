@@ -5,5 +5,7 @@ test('select visible', async ({ page }) => {
     // const combobox = page.getByRole('combobox');
     const combobox = page.locator('id=cars');
     await expect(combobox).toBeVisible();
-    //await expect(combobox).toHaveValues([/R/, /G/]);
+    await combobox.selectOption('saab');
+    await expect(combobox).toHaveValue('saab');
+    await expect(combobox).not.toHaveValue('volvo');
 });
